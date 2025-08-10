@@ -2,6 +2,7 @@ import allure
 from allure_commons.types import AttachmentType
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver import Keys, ActionChains
 
 
 class BasePage:
@@ -10,7 +11,7 @@ class BasePage:
         print("\nINIT BASE PAGE ------------------------------------")
         self.driver = driver
         self.wait = WebDriverWait(driver, 10, poll_frequency=1)
-        self.active = None
+        self.action = ActionChains(driver)
 
     def open(self):
         with allure.step(f"Open {self.PAGE_URL} page"):
