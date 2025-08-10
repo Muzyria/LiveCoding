@@ -22,6 +22,8 @@ class BaseTest:
         request.cls.dashboard_page = DashboardPage(driver)
         request.cls.personal_page = PersonalPage(driver)
 
+        request.cls.it_is_my_test = "ITS MY TEST NEW"
+
 
 
 

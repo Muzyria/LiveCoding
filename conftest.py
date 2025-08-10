@@ -15,5 +15,6 @@ def driver(request):
     # driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
     driver = webdriver.Chrome(options=options)
     # request.cls.driver = driver
+    request.cls.it_is_my_test = "ITS MY TEST"
     yield driver
     driver.quit()
